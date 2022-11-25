@@ -1,0 +1,31 @@
+instale sanity en el backend https://www.sanity.io/javascriptmastery2022
+se inicia con sanity start
+
+instale esto en el frontend
+npm install @sanity/client @sanity/image-url react-google-login react-icons react-loader-spinner react-masonry-css react-router-dom uuid
+
+Google sign in button:
+https://console.cloud.google.com/welcome?project=hopeful-altar-307103&hl=es-419&pli=1
+cree el nuevo proyecto ahi 
+Despues en el menu entre en APIS y Servicios
+
+Es importante correr el proyecto en localhost para evtirar problemas con google
+
+google Oauth
+https://www.npmjs.com/package/@react-oauth/google
+npm install @react-oauth/google jwt-decode
+
+jwt decode es para decifrar lo que viene encriptado
+
+sanity manage
+en sanity manage API tokens agregue:
+nombre: react-token
+opcion deploy studio
+
+otro token:
+nombre: react
+opcion Editor
+
+sanity start
+
+Al final cree un documento que se llama _redirects en la carpeta public
