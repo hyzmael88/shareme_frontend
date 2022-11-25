@@ -29,3 +29,7 @@ opcion Editor
 sanity start
 
 Al final cree un documento que se llama _redirects en la carpeta public
+
+lo subi a netlify el frontend
+
+despues en terminal de backedn escribi sanity deploy
