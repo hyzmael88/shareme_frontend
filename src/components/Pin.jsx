@@ -15,7 +15,7 @@ function Pin({ pin: { postedBy, image, _id, destination, save } }) {
   console.log(save)
   console.log(user)
 
-  const alreadySaved = (save?.filter((item) => item.postedBy._id === user.sub))?.length
+  const alreadySaved = (save?.filter((item) => item.postedBy._id === user?.sub))?.length
   // si el usuario 1 esta en el arreglo de guardados de pin...
   // si el usuario 4 esta en el arreglo de guardados de pin...
   // 1, [2,3,1] -> [1].length -> 1 -> !1 -> false ->!false -> true
@@ -29,10 +29,10 @@ function Pin({ pin: { postedBy, image, _id, destination, save } }) {
         .setIfMissing({save:[]})
         .insert('after', 'save[-1]', [{
           _key: uuidv4,
-          userId: user.sub,
+          userId: user?.sub,
           postedBy:{
             _type:'postedBy',
-            _ref: user.sub
+            _ref: user?.sub
           }
 
         }])
@@ -109,7 +109,7 @@ function Pin({ pin: { postedBy, image, _id, destination, save } }) {
 
                 </a>
               )}
-              {postedBy?._id === user.sub && (
+              {postedBy?._id === user?.sub && (
                 <button
                 type="button"
                 onClick={(e) =>{
